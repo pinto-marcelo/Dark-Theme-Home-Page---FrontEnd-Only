@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:oais_task_hp_gh/bottomnavbar.dart';
 
 class HomePageDark extends StatelessWidget {
   const HomePageDark({Key? key}) : super(key: key);
@@ -7,6 +8,7 @@ class HomePageDark extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: const BottomNavBar(),
       backgroundColor: Colors.black,
       body: SingleChildScrollView(
         child: Padding(
@@ -139,7 +141,9 @@ class HomePageDark extends StatelessWidget {
                       const Padding(
                         padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
                       ),
+                      //calendar container
                       Container(
+                        //width: MediaQuery.of(context).size.width,
                         padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                           color: const Color.fromARGB(235, 78, 211, 193),
@@ -152,7 +156,7 @@ class HomePageDark extends StatelessWidget {
                               color: Colors.black,
                             ),
                             const Padding(
-                              padding: EdgeInsets.fromLTRB(3, 0, 3, 0),
+                              padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
                             ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -180,11 +184,16 @@ class HomePageDark extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(125, 0, 0, 0),
-                              child: IconButton(
-                                onPressed: (() {}),
-                                icon: const Icon(Icons.add_to_photos),
+                            Flexible(
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: <Widget>[
+                                  IconButton(
+                                    onPressed: (() {}),
+                                    icon: const Icon(Icons.add_to_photos),
+                                  ),
+                                ],
                               ),
                             ),
                           ],
@@ -206,7 +215,7 @@ class HomePageDark extends StatelessWidget {
                               color: Colors.white,
                             ),
                             const Padding(
-                              padding: EdgeInsets.fromLTRB(3, 0, 3, 0),
+                              padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
                             ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -234,12 +243,17 @@ class HomePageDark extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(137, 0, 0, 0),
-                              child: IconButton(
-                                onPressed: (() {}),
-                                icon: const Icon(Icons.add_to_photos),
-                                color: Colors.white,
+                            Expanded(
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  IconButton(
+                                    onPressed: (() {}),
+                                    icon: const Icon(Icons.add_to_photos),
+                                    color: Colors.white,
+                                  ),
+                                ],
                               ),
                             ),
                           ],
@@ -261,7 +275,7 @@ class HomePageDark extends StatelessWidget {
                               color: Colors.white,
                             ),
                             const Padding(
-                              padding: EdgeInsets.fromLTRB(3, 0, 3, 0),
+                              padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
                             ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -289,12 +303,17 @@ class HomePageDark extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(175, 0, 0, 0),
-                              child: IconButton(
-                                onPressed: (() {}),
-                                icon: const Icon(Icons.add_to_photos),
-                                color: Colors.white,
+                            Expanded(
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  IconButton(
+                                    onPressed: (() {}),
+                                    icon: const Icon(Icons.add_to_photos),
+                                    color: Colors.white,
+                                  ),
+                                ],
                               ),
                             ),
                           ],
@@ -316,7 +335,7 @@ class HomePageDark extends StatelessWidget {
                               color: Colors.white,
                             ),
                             const Padding(
-                              padding: EdgeInsets.fromLTRB(3, 0, 3, 0),
+                              padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
                             ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -344,12 +363,17 @@ class HomePageDark extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(125, 0, 0, 0),
-                              child: IconButton(
-                                onPressed: (() {}),
-                                icon: const Icon(Icons.add_to_photos),
-                                color: Colors.white,
+                            Expanded(
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  IconButton(
+                                    onPressed: (() {}),
+                                    icon: const Icon(Icons.add_to_photos),
+                                    color: Colors.white,
+                                  ),
+                                ],
                               ),
                             ),
                           ],
@@ -372,6 +396,9 @@ class HomePageDark extends StatelessWidget {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Column(
                                   children: [
+                                    const Padding(
+                                      padding: EdgeInsets.fromLTRB(0, 5, 0, 0),
+                                    ),
                                     const Text(
                                       "Cloud",
                                       style: TextStyle(
@@ -386,8 +413,10 @@ class HomePageDark extends StatelessWidget {
                                       "Acess our cloud \nservices to upload \nand download files",
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.bold),
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 12,
+                                      ),
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.fromLTRB(
@@ -395,7 +424,8 @@ class HomePageDark extends StatelessWidget {
                                       //button container:
 
                                       child: Container(
-                                        width: 120,
+                                        width:
+                                            MediaQuery.of(context).size.width,
                                         decoration: BoxDecoration(
                                             borderRadius:
                                                 BorderRadius.circular(10),
@@ -430,6 +460,9 @@ class HomePageDark extends StatelessWidget {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Column(
                                   children: [
+                                    const Padding(
+                                      padding: EdgeInsets.fromLTRB(0, 5, 0, 0),
+                                    ),
                                     const Text(
                                       "Reef",
                                       style: TextStyle(
@@ -446,7 +479,8 @@ class HomePageDark extends StatelessWidget {
                                       style: TextStyle(
                                           color: Colors.black,
                                           fontFamily: "Deca",
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 12),
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.fromLTRB(
@@ -454,7 +488,8 @@ class HomePageDark extends StatelessWidget {
                                       //button container:
 
                                       child: Container(
-                                        width: 120,
+                                        width:
+                                            MediaQuery.of(context).size.width,
                                         decoration: BoxDecoration(
                                           border: Border.all(
                                               color: Colors.black, width: 1.5),
@@ -497,7 +532,7 @@ class HomePageDark extends StatelessWidget {
                               color: Colors.black,
                             ),
                             const Padding(
-                              padding: EdgeInsets.fromLTRB(3, 0, 3, 0),
+                              padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
                             ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -525,11 +560,16 @@ class HomePageDark extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(125, 0, 0, 0),
-                              child: IconButton(
-                                onPressed: (() {}),
-                                icon: const Icon(Icons.add_to_photos),
+                            Expanded(
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  IconButton(
+                                    onPressed: (() {}),
+                                    icon: const Icon(Icons.add_to_photos),
+                                  ),
+                                ],
                               ),
                             ),
                           ],
@@ -541,30 +581,6 @@ class HomePageDark extends StatelessWidget {
                     ],
                   ),
                 ),
-              ),
-              const Padding(
-                padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: const [
-                  Icon(
-                    Icons.work,
-                    color: Colors.white,
-                  ),
-                  Icon(
-                    Icons.app_blocking,
-                    color: Colors.white,
-                  ),
-                  Icon(
-                    Icons.web,
-                    color: Colors.white,
-                  ),
-                  Icon(
-                    Icons.network_cell,
-                    color: Colors.white,
-                  ),
-                ],
               ),
               const Padding(
                 padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
